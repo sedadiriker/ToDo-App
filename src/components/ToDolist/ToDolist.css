@@ -1,0 +1,100 @@
+.todolist{
+    background-color: rgb(247, 238, 223);
+    width: 40%;
+    text-align: center;
+    box-shadow: 2px 3px 25px black;
+    form{
+        width: 100%;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        position: relative;
+        input{
+            width: 70%;
+            padding: 15px;
+            outline: none;
+            border-radius: 24px;
+            border: 1px solid rgb(131, 70, 4);
+        }
+        .add-icon{
+            cursor: pointer;
+            position: absolute;
+            right: 20%;
+            top: 20%;
+            font-size: 2rem;
+            color: rgb(13, 58, 110);
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        
+    }
+    .todo{
+        min-height: 200px;
+        padding: 1rem;
+        font-size: 1.5rem;
+        .part-todo{
+            text-align: start;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            position: relative;
+
+        }
+        .edit-text{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 10px;
+            input{
+                padding: 12px;
+                width: 80%;
+                outline :none
+            }
+            button{
+                width: 15%;
+                cursor: pointer;
+                background-color: rgb(25, 73, 25);
+                color: white;
+            }
+        }
+        .delete-icon{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1rem;
+            color: white;
+            background-color: rgb(142, 6, 6);
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        .pencil-icon{
+            position: absolute;
+            top: 8px;
+            right: 35px;
+            padding: 5px;
+            font-size: 1.3rem;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.2);
+                color: green;
+            }
+        }
+
+    }
+    .completed{
+        text-decoration: line-through;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .todolist{
+        width: 90%;
+    }
+}
