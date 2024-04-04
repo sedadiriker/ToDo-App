@@ -15,9 +15,11 @@ const ToDolist = () => {
 
   const addTodo = (e) => {
     e.preventDefault();
-    const newTodo = { text: writeTerm, isEditing: false };
-    setTodoList([...todoList, newTodo]);
-    setWriteTerm(""); // inputu temizle
+    if (writeTerm.trim() !== "") { // boş değilse ekle
+      const newTodo = { text: writeTerm, isEditing: false };
+      setTodoList([...todoList, newTodo]);
+      setWriteTerm(""); // inputu temizle
+    }
   };
 
   const handleEdit = (index) => {
